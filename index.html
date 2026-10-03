@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shiveen Sharma | Cloud & DevOps Engineer</title>
+<meta name="description" content="Portfolio of Shiveen Sharma, AWS Certified Solutions Architect Associate and Cloud Practitioner, building on AWS, Terraform, Docker and Kubernetes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eaf2fb;--paper:#fff;--ink:#0b2545;--mute:#4a5f7c;--line:#b9cde6;--blue:#1f5fbf;--amber:#e07b00;--teal:#117a6e}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font:17px/1.65 "IBM Plex Sans",system-ui,sans-serif;color:var(--ink);background:var(--bg);background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:44px 44px;background-attachment:fixed}
+body:before{content:"";position:fixed;inset:0;background:var(--bg);opacity:.82;z-index:-1}
+h1,h2,h3{font-family:Sora,system-ui,sans-serif;line-height:1.15}
+a{color:var(--blue)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0;font-weight:500}
+nav b{font-family:Sora;font-size:18px}
+nav a{margin-left:22px;color:var(--ink);text-decoration:none}
+nav a:hover{color:var(--blue)}
+.hero{padding:40px 0 56px}
+.hero h1{font-size:clamp(38px,6.4vw,68px);font-weight:800;letter-spacing:-.02em;max-width:14ch}
+.hero p.lead{font-size:20px;max-width:56ch;margin:20px 0 28px;color:var(--mute)}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 22px;border-radius:6px;font-weight:500;text-decoration:none;border:2px solid var(--ink)}
+.btn.p{background:var(--ink);color:#fff}
+.btn.p:hover{background:var(--blue);border-color:var(--blue)}
+.btn.s{color:var(--ink);background:var(--paper)}
+.btn.s:hover{border-color:var(--blue);color:var(--blue)}
+.diagram{margin-top:48px;background:var(--paper);border:2px solid var(--ink);border-radius:10px;padding:20px 12px 10px;overflow-x:auto}
+.diagram svg{display:block;min-width:640px;width:100%;height:auto}
+.diagram figcaption{font-size:14px;color:var(--mute);padding:6px 12px 10px}
+.node rect{fill:var(--paper);stroke:var(--ink);stroke-width:2}
+.node text{font:500 15px "IBM Plex Sans",sans-serif;fill:var(--ink);text-anchor:middle}
+.node .sub{font-size:12px;fill:var(--mute)}
+.pipe{stroke:var(--blue);stroke-width:2.5;fill:none;stroke-dasharray:6 6}
+.packet{fill:var(--amber)}
+section{padding:56px 0}
+h2{font-size:clamp(28px,4vw,38px);margin-bottom:8px}
+.sub-h{color:var(--mute);margin-bottom:28px;max-width:60ch}
+.certs{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.cert{background:var(--paper);border:2px solid var(--ink);border-radius:10px;padding:24px;border-top:8px solid var(--amber)}
+.cert.b{border-top-color:var(--teal)}
+.cert h3{font-size:20px;margin-bottom:6px}
+.cert .code{display:inline-block;margin-top:12px;padding:3px 10px;border:1.5px solid var(--ink);border-radius:20px;font-weight:500;font-size:14px}
+.proj{background:var(--paper);border:2px solid var(--ink);border-radius:10px;padding:28px;margin-bottom:22px}
+.proj.feat{border-left:10px solid var(--blue)}
+.proj h3{font-size:24px;margin-bottom:8px}
+.proj p{max-width:70ch;color:var(--mute)}
+.flow{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:16px 0}
+.flow span{background:var(--bg);border:1.5px solid var(--blue);border-radius:6px;padding:4px 12px;font-weight:500;font-size:15px}
+.flow i{font-style:normal;color:var(--amber);font-weight:700}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.tags span{font-size:14px;padding:2px 10px;border-radius:4px;background:#d6e5f7}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+.grid2 .proj{margin:0}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.skills div{background:var(--paper);border:2px solid var(--ink);border-radius:10px;padding:18px}
+.skills h3{font-size:16px;margin-bottom:6px;color:var(--blue)}
+.contact{background:var(--ink);color:#fff;border-radius:14px;padding:44px 32px;text-align:center}
+.contact h2{color:#fff}
+.contact p{color:#c9d8ee;margin-bottom:24px}
+.contact .btn{border-color:#fff}
+.contact .btn.p{background:var(--amber);border-color:var(--amber);color:#0b2545}
+.contact .btn.s{background:transparent;color:#fff}
+.contact .btn:hover{background:#fff;color:var(--ink);border-color:#fff}
+footer{padding:28px 0 40px;text-align:center;color:var(--mute);font-size:14px}
+@media (prefers-reduced-motion:reduce){.packet{display:none}html{scroll-behavior:auto}}
+@media (max-width:560px){nav a{margin-left:14px}}
+.arch{margin:18px 0 4px;background:var(--bg);border:1.5px solid var(--line);border-radius:8px;padding:14px;overflow-x:auto}.arch svg{display:block;min-width:520px;width:100%;height:auto}.ar{stroke:var(--blue);stroke-width:2;fill:none}.verify{display:inline-block;margin-top:14px;margin-left:10px;font-weight:500}.grid2{grid-template-columns:1fr}.grid2 .proj{margin:0}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><b>Shiveen Sharma</b><div><a href="#certs">Certifications</a><a href="#projects">Projects</a><a href="#contact">Contact</a></div></nav>
+
+<header class="hero">
+<h1>I build and automate cloud infrastructure on AWS.</h1>
+<p class="lead">AWS Certified Solutions Architect and Cloud Practitioner, from Bhopal, India. I work with Terraform, Docker, Kubernetes and CI/CD, and I'm looking for Cloud Engineer and DevOps roles.</p>
+<div class="btns">
+<a class="btn p" href="#projects">See my projects</a>
+<a class="btn s" href="https://github.com/Shiveen-Sharma" target="_blank" rel="noopener">GitHub</a>
+<a class="btn s" href="https://www.linkedin.com/in/shiveen-sharma" target="_blank" rel="noopener">LinkedIn</a>
+</div>
+
+<figure class="diagram">
+<svg viewBox="0 0 760 170" role="img" aria-label="Request path: Browser to Route 53 to CloudFront to S3">
+<path id="route" class="pipe" d="M100 70 H660"/>
+<g class="node"><rect x="20" y="40" width="160" height="60" rx="8"/><text x="100" y="68">Browser</text><text class="sub" x="100" y="88">shiveen.site</text></g>
+<g class="node"><rect x="210" y="40" width="160" height="60" rx="8"/><text x="290" y="68">Route 53</text><text class="sub" x="290" y="88">DNS</text></g>
+<g class="node"><rect x="400" y="40" width="160" height="60" rx="8"/><text x="480" y="68">CloudFront</text><text class="sub" x="480" y="88">CDN + HTTPS</text></g>
+<g class="node"><rect x="590" y="40" width="150" height="60" rx="8"/><text x="665" y="68">S3 bucket</text><text class="sub" x="665" y="88">static files</text></g>
+<circle class="packet" r="7"><animateMotion dur="4s" repeatCount="indefinite" path="M100 70 H660"/></circle>
+</svg>
+<figcaption>This site's own request path. It is served from S3 through CloudFront, with DNS on Route 53.</figcaption>
+</figure>
+</header>
+
+<section id="certs">
+<h2>Certifications</h2>
+<p class="sub-h">Two AWS certifications, covering cloud fundamentals and architecture design.</p>
+<div class="certs">
+<div class="cert"><h3>AWS Certified Solutions Architect – Associate</h3><p>Designing secure, resilient, high-performing and cost-optimized architectures on AWS.</p><span class="code">SAA-C03</span><a class="verify" href="https://www.credly.com/badges/565a920c-53c8-4a2f-9125-ef13865b3851/public_url" target="_blank" rel="noopener">View credential</a></div>
+<div class="cert b"><h3>AWS Certified Cloud Practitioner</h3><p>Core AWS services, security, pricing and cloud concepts.</p><span class="code">CLF-C02</span><a class="verify" href="https://www.credly.com/badges/84e7d6bc-c3b9-40b1-8cec-2781d7ada8b6/public_url" target="_blank" rel="noopener">View credential</a></div>
+</div>
+</section>
+
+<section id="projects">
+<h2>Projects</h2>
+<p class="sub-h">Hands-on builds, each one deployed and debugged for real.</p>
+
+<article class="proj feat">
+<h3>Serverless ETL Pipeline</h3>
+<p>An event-driven data pipeline on AWS. A file upload triggers processing automatically, and failures raise alerts.</p>
+<div class="arch"><svg viewBox="0 0 700 150" role="img" aria-label="ETL pipeline architecture"><defs><marker id="a1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#1f5fbf"/></marker></defs><path class="ar" marker-end="url(#a1)" d="M120 75.0 C132.5 75.0 132.5 75.0 143 75.0"/><path class="ar" marker-end="url(#a1)" d="M265 75.0 C277.5 75.0 277.5 75.0 288 75.0"/><path class="ar" marker-end="url(#a1)" d="M410 75.0 C422.5 75.0 422.5 75.0 433 75.0"/><path class="ar" marker-end="url(#a1)" d="M555 75.0 C567.5 75.0 567.5 30.0 578 30.0"/><path class="ar" marker-end="url(#a1)" d="M555 75.0 C567.5 75.0 567.5 120.0 578 120.0"/><g class="node"><rect x="0" y="53" width="120" height="44" rx="8"/><text x="60.0" y="80">S3 upload</text></g><g class="node"><rect x="145" y="53" width="120" height="44" rx="8"/><text x="205.0" y="80">Lambda</text></g><g class="node"><rect x="290" y="53" width="120" height="44" rx="8"/><text x="350.0" y="80">Glue job</text></g><g class="node"><rect x="435" y="53" width="120" height="44" rx="8"/><text x="495.0" y="80">EventBridge</text></g><g class="node"><rect x="580" y="8" width="120" height="44" rx="8"/><text x="640.0" y="35">SNS alert</text></g><g class="node"><rect x="580" y="98" width="120" height="44" rx="8"/><text x="640.0" y="125">CloudWatch</text></g></svg></div>
+<div class="tags"><span>AWS</span><span>Serverless</span><span>Python</span><span>Monitoring</span></div>
+</article>
+
+<article class="proj feat">
+<h3>Multi-environment Infrastructure with Terraform</h3>
+<p>Infrastructure as code across environments, with remote state in S3 and DynamoDB locking. Includes an EKS cluster provisioned with Terraform, plus recovery from state lock and state file problems.</p>
+<div class="arch"><svg viewBox="0 0 600 190" role="img" aria-label="Terraform architecture"><defs><marker id="a2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#1f5fbf"/></marker></defs><path class="ar" marker-end="url(#a2)" d="M140 95.0 C185.0 95.0 185.0 32.0 228 32.0"/><path class="ar" marker-end="url(#a2)" d="M140 95.0 C185.0 95.0 185.0 95.0 228 95.0"/><path class="ar" marker-end="url(#a2)" d="M140 95.0 C185.0 95.0 185.0 158.0 228 158.0"/><path class="ar" marker-end="url(#a2)" d="M370 95.0 C415.0 95.0 415.0 95.0 458 95.0"/><g class="node"><rect x="0" y="73" width="140" height="44" rx="8"/><text x="70.0" y="100">Terraform</text></g><g class="node"><rect x="230" y="10" width="140" height="44" rx="8"/><text x="300.0" y="37">S3 remote state</text></g><g class="node"><rect x="230" y="73" width="140" height="44" rx="8"/><text x="300.0" y="100">dev / stage / prod</text></g><g class="node"><rect x="230" y="136" width="140" height="44" rx="8"/><text x="300.0" y="163">DynamoDB lock</text></g><g class="node"><rect x="460" y="73" width="140" height="44" rx="8"/><text x="530.0" y="100">EKS cluster</text></g></svg></div><div class="tags"><span>Terraform</span><span>EKS</span><span>S3 remote state</span><span>DynamoDB</span><span>count / for_each</span></div>
+</article>
+
+<div class="grid2">
+<article class="proj">
+<h3>Docker and CI/CD Practice</h3>
+<p>Multi-stage builds, Docker Compose networking, and three-job GitHub Actions pipelines.</p>
+<div class="arch"><svg viewBox="0 0 600 70" role="img" aria-label="CI/CD architecture"><defs><marker id="a3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#1f5fbf"/></marker></defs><path class="ar" marker-end="url(#a3)" d="M170 35.0 C192.5 35.0 192.5 35.0 213 35.0"/><path class="ar" marker-end="url(#a3)" d="M385 35.0 C407.5 35.0 407.5 35.0 428 35.0"/><g class="node"><rect x="0" y="13" width="170" height="44" rx="8"/><text x="85.0" y="40">git push</text></g><g class="node"><rect x="215" y="13" width="170" height="44" rx="8"/><text x="300.0" y="40">GitHub Actions</text></g><g class="node"><rect x="430" y="13" width="170" height="44" rx="8"/><text x="515.0" y="40">Docker image</text></g></svg></div><div class="tags"><span>Docker</span><span>GitHub Actions</span><span>Flask</span></div>
+<p style="margin-top:12px"><a href="https://github.com/Shiveen-Sharma/docker-devops-practice" target="_blank" rel="noopener">View repository</a></p>
+</article>
+<article class="proj">
+<h3>Containerized Django Notes App</h3>
+<p>Three-tier app run with Docker Compose: Nginx, Django with Gunicorn, and MySQL.</p>
+<div class="arch"><svg viewBox="0 0 700 70" role="img" aria-label="Django app architecture"><defs><marker id="a4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#1f5fbf"/></marker></defs><path class="ar" marker-end="url(#a4)" d="M140 35.0 C163.5 35.0 163.5 35.0 185 35.0"/><path class="ar" marker-end="url(#a4)" d="M327 35.0 C350.0 35.0 350.0 35.0 371 35.0"/><path class="ar" marker-end="url(#a4)" d="M513 35.0 C536.5 35.0 536.5 35.0 558 35.0"/><g class="node"><rect x="0" y="13" width="140" height="44" rx="8"/><text x="70.0" y="40">Browser</text></g><g class="node"><rect x="187" y="13" width="140" height="44" rx="8"/><text x="257.0" y="40">Nginx</text></g><g class="node"><rect x="373" y="13" width="140" height="44" rx="8"/><text x="443.0" y="40">Django + Gunicorn</text></g><g class="node"><rect x="560" y="13" width="140" height="44" rx="8"/><text x="630.0" y="40">MySQL</text></g></svg></div><div class="tags"><span>Nginx</span><span>Django</span><span>MySQL</span><span>Compose</span></div>
+</article>
+<article class="proj">
+<h3>Kubernetes with kind</h3>
+<p>Pods, deployments, services and ingress on a local cluster in GitHub Codespaces.</p>
+<div class="arch"><svg viewBox="0 0 700 70" role="img" aria-label="Kubernetes architecture"><defs><marker id="a5" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#1f5fbf"/></marker></defs><path class="ar" marker-end="url(#a5)" d="M140 35.0 C163.5 35.0 163.5 35.0 185 35.0"/><path class="ar" marker-end="url(#a5)" d="M327 35.0 C350.0 35.0 350.0 35.0 371 35.0"/><path class="ar" marker-end="url(#a5)" d="M513 35.0 C536.5 35.0 536.5 35.0 558 35.0"/><g class="node"><rect x="0" y="13" width="140" height="44" rx="8"/><text x="70.0" y="40">Ingress</text></g><g class="node"><rect x="187" y="13" width="140" height="44" rx="8"/><text x="257.0" y="40">Service</text></g><g class="node"><rect x="373" y="13" width="140" height="44" rx="8"/><text x="443.0" y="40">Deployment</text></g><g class="node"><rect x="560" y="13" width="140" height="44" rx="8"/><text x="630.0" y="40">Pods</text></g></svg></div><div class="tags"><span>Kubernetes</span><span>kind</span><span>YAML</span></div>
+</article>
+</div>
+</section>
+
+<section id="skills">
+<h2>Toolbox</h2>
+<p class="sub-h">&nbsp;</p>
+<div class="skills">
+<div><h3>Cloud</h3>S3, CloudFront, Route 53, Lambda, Glue, EventBridge, SNS, CloudWatch, EKS, IAM</div>
+<div><h3>Infrastructure as code</h3>Terraform, remote state, multi-environment setups</div>
+<div><h3>Containers</h3>Docker, Docker Compose, Kubernetes</div>
+<div><h3>CI/CD</h3>GitHub Actions, Git</div>
+<div><h3>Data and code</h3>Python, SQL, HTML, Power BI</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="contact">
+<h2>Let's work together</h2>
+<p>I'm open to Cloud Engineer, Cloud DevOps and junior DevOps roles.</p>
+<div class="btns" style="justify-content:center">
+<a class="btn p" href="https://www.linkedin.com/in/shiveen-sharma" target="_blank" rel="noopener">Message me on LinkedIn</a>
+<a class="btn s" href="https://github.com/Shiveen-Sharma" target="_blank" rel="noopener">See my code on GitHub</a>
+</div>
+</div>
+</section>
+
+<footer>&copy; 2026 Shiveen Sharma. Hosted on AWS with S3, CloudFront and Route 53.</footer>
+</div>
+</body>
+</html>
